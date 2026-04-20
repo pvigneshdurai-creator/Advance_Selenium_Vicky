@@ -55,10 +55,10 @@ public class BaseTest5 {
 	@BeforeClass
 	public void bc() throws IOException {
 		System.out.println("BeforeClass Browser Launched");
-		String browser = fileUtility.readDataFromPropertyFile("browserName");
-		String url=fileUtility.readDataFromPropertyFile("baseUrl");
-		//String browser = System.getProperty("browserName");   //for mvn test -Dbrowser=edge
-		//String url = System.getProperty("baseUrl");     //for mvn test -Durl=https://demowebshop.tricentis.com/
+		//String browser = fileUtility.readDataFromPropertyFile("browserName");
+		//String url=fileUtility.readDataFromPropertyFile("baseUrl");
+		String browser = System.getProperty("browserName");   //for mvn test -Dbrowser=edge
+		String url = System.getProperty("baseUrl");     //for mvn test -Durl=https://demowebshop.tricentis.com/
 		if(browser.equalsIgnoreCase("chrome")) {
 			driver=new ChromeDriver();
 			}else if(browser.equalsIgnoreCase("edge")){
